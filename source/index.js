@@ -1,3 +1,4 @@
+import useRapier from './useRapier'
 // Ensure we have one of the rapier libs
 try {
   require('@dimforge/rapier3d')
@@ -8,3 +9,5 @@ try {
     throw new Error('Please install either @dimforge/rapier2d or @dimforge/rapier3d')
   }
 }
+
+export { useRapier }

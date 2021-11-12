@@ -1,16 +1,21 @@
 {
-  "name": "rapier-react",
+  "name": "rapier-hooks",
   "version": "0.0.1",
-  "description": "Unofficial rapier physics engine react bindings",
-  "main": "index.js",
+  "description": "React hook bindings for the Rapier physics engine",
+  "main": "source/index.js",
   "scripts": {
-    "build": "microbundle",
+    "build": "microbundle source/index.js",
     "dev": "cross-env NODE_ENV=development&&microbundle watch",
     "build-production": "cross-env NODE_ENV=production&&microbundle",
     "test": "mocha \"tests/**/*.js\"",
     "prepublishOnly": "npm run build-production&&npm run test",
     "publish-alias": "npm publish"
   },
+  "files": [
+    "/dist/rapier-hooks.js",
+    "/dist/rapier-hooks.js.map"
+  ], 
+  "main": "./dist/rapier-hooks.js",
   "devDependencies": {
     "microbundle": "^0.13.0",
     "mocha": "^8.2.1",
