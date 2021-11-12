@@ -1,0 +1,44 @@
+{
+  "name": "rapier-react",
+  "version": "0.0.1",
+  "description": "Unofficial rapier physics engine react bindings",
+  "main": "index.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "cross-env NODE_ENV=development&&microbundle watch",
+    "build-production": "cross-env NODE_ENV=production&&microbundle",
+    "test": "mocha \"tests/**/*.js\"",
+    "prepublishOnly": "npm run build-production&&npm run test",
+    "publish-alias": "npm publish"
+  },
+  "devDependencies": {
+    "microbundle": "^0.13.0",
+    "mocha": "^8.2.1",
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L1lith/Rapier-React.git"
+  },
+  "keywords": [
+    "rapier",
+    "react",
+    "physics",
+    "webasm"
+  ],
+  "author": "L1lith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/L1lith/Rapier-React/issues"
+  },
+  "homepage": "https://github.com/L1lith/Rapier-React#readme",
+  "optionalDependencies": {
+    "@dimforge/rapier2d": "^0.7.6",
+    "@dimforge/rapier3d": "^0.7.6"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "sandhands": "^1.8.9"
+  }
+}
