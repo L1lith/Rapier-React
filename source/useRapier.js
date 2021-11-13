@@ -3,14 +3,14 @@ import { sanitize } from 'sandhands'
 
 const propsFormat = {
   _: {
-    dimensions: { _: Number, min: 2, max: 3, whole },
+    dimensions: { _: Number, min: 2, max: 3, integer: true },
     gravity: { _: { x: Number, y: Number, z: Number }, allOptional: true },
     gameLoop: Function
   },
   allOptional: true
 }
 
-function useRapier(props) {
+function useRapier(props = {}) {
   sanitize(props, propsFormat)
   const [RAPIER, setRapier] = useState(null)
   const [error, setError] = useState()
